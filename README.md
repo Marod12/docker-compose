@@ -5,7 +5,7 @@
 - [x] [Docker](https://www.docker.com/get-started)
 - [x] [Docker Hub](https://hub.docker.com/)
 
-- [ ] [Docker Compose](https://docs.docker.com/compose/install/)
+- [X] [Docker Compose](https://docs.docker.com/compose/install/)
 
 
 
@@ -71,10 +71,27 @@ docker run -d -v "$(pwd)/website":/var/www/html -p 8888:80 --link node-container
 
 ## docker compose
 
-`docker-compose up -d`   | inicia o as configurações do arquivo [.yml](./docker-compose.yml)
+`docker-compose up -d`   | inicia o as configurações do arquivo [.yml](./docker-compose.yml) <br>
 
-`docker-compose stop`   | para os containers
+`docker-compose stop`   | para os containers <br>
 
 ### não se esqueça de fazer o restore do banco
 
 `docker exec -i mysql-container mysql -uroot -pmarod < api/db/script.sql`
+
+
+---
+
+## aplicação
+
+> *localhost:9001/constelacoes*
+
+<div align="center">
+    <img src="./.github/api.png" width="180">
+</div>
+
+> *localhost:8888*
+
+<div align="center">
+    <img src="./.github/web.png" width="180">
+</div>
